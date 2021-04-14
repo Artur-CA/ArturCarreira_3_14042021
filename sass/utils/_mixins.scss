@@ -3,5 +3,12 @@
   text-decoration: none;
   border-radius: 25px;
   font-size: 15px;
+  padding: 12px 15px;
+  margin-top: 30px;
   color: #fff;
+  background: -webkit-linear-gradient(-80deg, $color-secondary, $color-primary);
+  box-shadow: 0 6px 6px #bebebe;
+  &:active {
+    opacity: 0.8;
+  }
 }
