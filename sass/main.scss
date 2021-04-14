@@ -1,14 +1,14 @@
 @import "./utils/reset";
 @import "./utils/variables";
+@import "./utils/mixins";
 
 @import "./base/base";
 @import "./base/typography";
 
+@import "./components/buttons";
+
 @import "./layout/header";
-@import "./layout/main";
 @import "./layout/footer";
 
-@import "./pages/A_la_française";
-@import "./pages/La_note_enchantée";
-@import "./pages/La_palette_du_goût";
-@import "./pages/Le_délice_des_sens";
+@import "./pages/home";
+@import "./pages/menu";

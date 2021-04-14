@@ -1,0 +1,39 @@
+.header {
+  background-color: #ececec;
+  &__logo {
+    background: #fff;
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 7px #bebebe;
+  }
+  img {
+    height: 50px;
+    width: 170px;
+  }
+}
+
+.search__location {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 170px;
+  &__spot {
+    padding: 8px 5px;
+  }
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  padding: 15px 10px;
+  width: 100%;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+  }
+}
