@@ -1,0 +1,28 @@
+.footer {
+  padding: 20px;
+  background-color: rgb(61, 61, 61);
+
+  &__logo {
+    filter: invert(100%);
+    width: 30%;
+    padding-bottom: 10px;
+  }
+  &__link li {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  &__lk {
+    color: white;
+    padding-right: 30px;
+    & span {
+      padding-left: 10px;
+    }
+  }
+}
+
+.icon-u {
+  font-size: 12px;
+}
+.icon-h {
+  font-size: 9px;
+}
