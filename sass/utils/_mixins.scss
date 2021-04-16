@@ -10,6 +10,7 @@
   box-shadow: 0 6px 6px #bebebe;
   &:active {
     opacity: 0.8;
+    box-shadow: 0 6px 6px #727272;
   }
 }
 
@@ -17,4 +18,22 @@
   background: linear-gradient(to top, $color-secondary 0%, $color-primary 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@mixin sm {
+  @media only screen and (min-width: 665px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
 }

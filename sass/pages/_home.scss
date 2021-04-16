@@ -18,11 +18,29 @@
 .operation {
   padding-top: 15px;
   margin: 30px 20px;
+  @include sm {
+    text-align: center;
+  }
+
+  .operation__title {
+    @include md {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+  }
+
   &__resto {
     display: flex;
     flex-direction: column;
     padding: 20px 0px 30px 10px;
+    @include md {
+      flex-direction: row;
+      width: 100%;
+    }
   }
+
   &__btn {
     font-weight: 700;
     margin: 10px 0;
@@ -30,13 +48,32 @@
     border-radius: 20px;
     box-shadow: 0 6px 6px #ebebeb;
     background-color: rgb(248, 247, 247);
+
+    @include md {
+      margin: 0 auto;
+      width: 270px;
+    }
+
     &:active {
       background-color: #f5eeff;
+      box-shadow: 0 6px 6px #a5a5a5;
       .operation__icon {
         color: $color-primary;
       }
     }
+
+    @include lg {
+      width: 350px;
+      &:hover {
+        background-color: #f5eeff;
+        box-shadow: 0 6px 6px #a5a5a5;
+        .operation__icon {
+          color: $color-primary;
+        }
+      }
+    }
   }
+
   &__icon {
     padding: 0 15px;
   }
@@ -54,20 +91,42 @@
   background-color: #f5f5f5;
   width: 100%;
   padding: 40px 0;
+  margin: 0 auto;
 
-  &__container,
+  &__container {
+    margin: 20px;
+    @include lg {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
   &__title {
     margin: 20px;
+    @include sm {
+      text-align: center;
+    }
+    @include md {
+      text-align: center;
+      padding-bottom: 30px;
+    }
   }
 
   &__card {
     position: relative;
     border-radius: 15px;
     background-color: #fff;
-
     margin: 15px 0;
     height: 220px;
     box-shadow: 0 6px 6px #ebebeb;
+    @include lg {
+      width: 48%;
+    }
+
+    &:active {
+      box-shadow: 0 6px 6px #949494;
+    }
 
     &__img {
       border-top-left-radius: 15px;
@@ -112,19 +171,35 @@
   position: absolute;
   right: 10px;
   top: 5px;
-  font-size: 22px;
-  color: #727272;
+  font-size: 23px;
+  color: #676669;
 }
+
 .full {
   position: absolute;
   right: 10px;
   top: 5px;
-  font-size: 22px;
+  font-size: 23px;
   opacity: 0;
   cursor: pointer;
+  transition-delay: 0ms;
+  transition-duration: 450ms;
+  @include gradient;
 
   &:active {
     opacity: 1;
     @include gradient;
+  }
+  @include md {
+    &:active {
+      opacity: 1;
+      @include gradient;
+    }
+  }
+  @include lg {
+    &:hover {
+      opacity: 1;
+      @include gradient;
+    }
   }
 }
