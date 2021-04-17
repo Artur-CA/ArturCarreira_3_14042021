@@ -161,9 +161,9 @@
     background: $color-tertiary;
     color: #18866b;
   }
-
   &__like {
     position: relative;
+    @include check-heart;
   }
 }
 
@@ -173,6 +173,8 @@
   top: 5px;
   font-size: 23px;
   color: #676669;
+  cursor: pointer;
+  transform: scale(1);
 }
 
 .full {
@@ -182,9 +184,10 @@
   font-size: 23px;
   opacity: 0;
   cursor: pointer;
-  transition-delay: 0ms;
-  transition-duration: 450ms;
   @include gradient;
+  transition-delay: 0ms;
+  transition-duration: 250ms;
+  transform: scale(1.08);
 
   &:active {
     opacity: 1;

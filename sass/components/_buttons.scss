@@ -1,3 +1,7 @@
 .request-btn {
   @include btn;
 }
+
+.resto__like {
+  @include check-heart;
+}
