@@ -1,7 +1,86 @@
-.request-btn {
-  @include btn;
+//-.-\\
+.request__btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 15px;
+  padding: 12px 15px;
+  margin-top: 30px;
+  color: #fff;
+  background: -webkit-linear-gradient(-80deg, $color-secondary, $color-primary);
+  box-shadow: 0 6px 6px #bebebe;
+  &:active {
+    opacity: 0.8;
+    box-shadow: 0 6px 6px #727272;
+  }
+  @include lg {
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 0 6px 6px #727272;
+    }
+  }
+}
+
+//-.-\\
+.resto__like {
+  position: relative;
+
+  input[type="checkbox"],
+  .resto__like .empty {
+    display: inline-block;
+    position: absolute;
+  }
+  input[type="checkbox"]:checked ~ .full {
+    display: inline-block;
+    position: absolute;
+    opacity: 1;
+  }
+  input[type="checkbox"]:checked ~ .empty {
+    display: inline-block;
+    position: absolute;
+  }
 }
 
 .resto__like {
-  @include check-heart;
+  .empty {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 23px;
+    color: #676669;
+    cursor: pointer;
+    transform: scale(1);
+  }
+
+  .full {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 23px;
+    opacity: 0;
+    cursor: pointer;
+    @include gradient;
+    transition-delay: 0ms;
+    transition-duration: 250ms;
+    transform: scale(1.08);
+
+    &:active {
+      opacity: 1;
+      @include gradient;
+    }
+
+    @include md {
+      &:active {
+        opacity: 1;
+        @include gradient;
+      }
+    }
+
+    @include lg {
+      &:hover {
+        opacity: 1;
+        @include gradient;
+      }
+    }
+  }
 }

@@ -1,40 +1,7 @@
-@mixin btn {
-  display: inline-block;
-  text-decoration: none;
-  border-radius: 25px;
-  font-size: 15px;
-  padding: 12px 15px;
-  margin-top: 30px;
-  color: #fff;
-  background: -webkit-linear-gradient(-80deg, $color-secondary, $color-primary);
-  box-shadow: 0 6px 6px #bebebe;
-  &:active {
-    opacity: 0.8;
-    box-shadow: 0 6px 6px #727272;
-  }
-}
-
 @mixin gradient {
   background: linear-gradient(to top, $color-secondary 0%, $color-primary 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-@mixin check-heart {
-  input[type="checkbox"],
-  .resto__like .empty {
-    display: inline-block;
-    position: absolute;
-  }
-  input[type="checkbox"]:checked ~ .full {
-    display: inline-block;
-    position: absolute;
-    opacity: 1;
-  }
-  input[type="checkbox"]:checked ~ .empty {
-    display: inline-block;
-    position: absolute;
-  }
 }
 
 @mixin sm {

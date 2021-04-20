@@ -1,0 +1,64 @@
+//spinner loader
+
+.spinner {
+  background-color: rgb(236, 236, 236);
+  animation: spinner 3s 1s both;
+  position: fixed;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.loader {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
+
+.loader__double {
+  position: relative;
+  border-radius: 75px;
+  border: 6px solid transparent;
+  border-top-color: $color-primary;
+  border-bottom-color: $color-secondary;
+  animation: spin 3s ease-in-out infinite;
+}
+
+.loader__double::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  border-radius: 75px;
+  border: 6px solid transparent;
+  border-top-color: $color-secondary;
+  border-bottom-color: $color-primary;
+  opacity: 0.6;
+  animation: spin-reverse 2s ease-in-out infinite;
+}
+
+.loader__double::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  bottom: 17px;
+  right: 17px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: $color-secondary;
+  border-bottom-color: $color-primary;
+  opacity: 0.3;
+  animation: spin 1s ease-in-out infinite;
+}
