@@ -49,6 +49,7 @@
 .menus {
   @include md {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
   }
 
@@ -61,7 +62,7 @@
     box-shadow: 0 6px 6px #ebebeb;
     cursor: pointer;
     @include md {
-      width: 25%;
+      width: 30%;
     }
 
     &:hover {
