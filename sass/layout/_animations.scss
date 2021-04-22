@@ -2,7 +2,7 @@
 
 .spinner {
   background-color: rgb(236, 236, 236);
-  animation: spinner 3s 1s both;
+  animation: spinner $anim-dur 1s both;
   position: fixed;
   opacity: 0.9;
   top: 0;
@@ -61,4 +61,14 @@
   border-bottom-color: $color-primary;
   opacity: 0.3;
   animation: spin 1s ease-in-out infinite;
+}
+
+//menu animation
+.mi {
+  animation: mi $anim-dur both;
+  @for $i from 1 through 9 {
+    &--#{$i} {
+      animation-delay: $anim-delay * $i;
+    }
+  }
 }
