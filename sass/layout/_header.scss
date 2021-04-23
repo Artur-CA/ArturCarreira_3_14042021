@@ -1,11 +1,11 @@
 .header {
-  background-color: #ececec;
+  background-color: $color-shadow;
   &__logo {
     background: #fff;
     padding-top: 10px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 2px 7px #bebebe;
+    box-shadow: 0 2px 7px $color-shadow-a;
   }
   img {
     height: 50px;

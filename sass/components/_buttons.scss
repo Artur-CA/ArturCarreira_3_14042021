@@ -8,15 +8,15 @@
   margin-top: 30px;
   color: #fff;
   background: -webkit-linear-gradient(-80deg, $color-secondary, $color-primary);
-  box-shadow: 0 6px 6px #bebebe;
+  box-shadow: 0 6px 6px $color-shadow;
   &:active {
     opacity: 0.8;
-    box-shadow: 0 6px 6px #727272;
+    box-shadow: 0 6px 6px $color-shadow-a;
   }
   @include lg {
     &:hover {
       opacity: 0.8;
-      box-shadow: 0 6px 6px #727272;
+      box-shadow: 0 6px 6px $color-shadow-a;
     }
   }
 }
@@ -47,7 +47,7 @@
     right: 10px;
     top: 5px;
     font-size: 23px;
-    color: #676669;
+    color: $color-shadow-a;
     cursor: pointer;
     transform: scale(1);
   }

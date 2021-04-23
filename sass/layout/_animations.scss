@@ -1,7 +1,7 @@
 //spinner loader
 
 .spinner {
-  background-color: rgb(236, 236, 236);
+  background-color: $color-bg-a;
   animation: spinner $anim-dur 1s both;
   position: fixed;
   opacity: 0.9;
