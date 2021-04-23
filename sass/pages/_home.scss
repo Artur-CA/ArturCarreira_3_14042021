@@ -52,7 +52,7 @@
       width: 270px;
     }
 
-    &:active {
+    &:hover {
       background-color: $color-bg-a;
       box-shadow: 0 6px 6px $color-shadow-a;
       .operation__icon {
@@ -108,6 +108,7 @@
     @include sm {
       text-align: center;
     }
+
     @include md {
       text-align: center;
       padding-bottom: 30px;
@@ -121,15 +122,7 @@
     margin: 15px 0;
     height: 220px;
     box-shadow: 0 6px 6px $color-shadow;
-
-    @include lg {
-      width: 48%;
-      &:hover {
-        box-shadow: 0 6px 6px $color-shadow-a;
-      }
-    }
-
-    &:active {
+    &:hover {
       box-shadow: 0 6px 6px $color-shadow-a;
     }
 
@@ -139,6 +132,10 @@
       object-fit: cover;
       width: 100%;
       height: 160px;
+    }
+
+    @include lg {
+      width: 48%;
     }
   }
 

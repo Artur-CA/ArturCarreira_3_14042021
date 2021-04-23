@@ -9,7 +9,7 @@
   color: #fff;
   background: -webkit-linear-gradient(-80deg, $color-secondary, $color-primary);
   box-shadow: 0 6px 6px $color-shadow;
-  &:active {
+  &:hover {
     opacity: 0.8;
     box-shadow: 0 6px 6px $color-shadow-a;
   }
@@ -64,23 +64,9 @@
     transition-duration: 250ms;
     transform: scale(1.08);
 
-    &:active {
+    &:hover {
       opacity: 1;
       @include gradient;
-    }
-
-    @include md {
-      &:active {
-        opacity: 1;
-        @include gradient;
-      }
-    }
-
-    @include lg {
-      &:hover {
-        opacity: 1;
-        @include gradient;
-      }
     }
   }
 }

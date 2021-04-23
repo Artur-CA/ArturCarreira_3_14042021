@@ -74,11 +74,9 @@
     border-radius: 15px;
     box-shadow: 0 6px 6px $color-shadow;
     cursor: pointer;
-    @include md {
-      width: 30%;
-    }
-
     &:hover {
+      box-shadow: 0 6px 6px $color-shadow-a;
+
       .menus__check {
         transform: scaleX(1);
         min-width: 50px;
@@ -87,6 +85,9 @@
         transform: rotate(0deg) rotate(360deg);
         transition: transform 400ms;
       }
+    }
+    @include md {
+      width: 30%;
     }
   }
 
